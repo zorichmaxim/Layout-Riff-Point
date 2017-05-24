@@ -5,23 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Riff Point</title>
 
-    
+
     <link rel="stylesheet" href="libs/grid/bootstrap.min.css">
     <link rel="stylesheet" href="Styles/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Styles/my-reset.css">
     <link rel="stylesheet" href="Styles/public.css">
-    <script src="libs/jquery/jquery-3.2.1.min.js"></script>
 
+    <script src="js/js-config.js" defer></script>
 
-    <script>
-
-    </script>
 </head>
 <body>
-
-
-
-<!--
 <div class="wrapper">
     <header class="header container">
         <div class="row">
@@ -47,14 +40,10 @@
         </div>
     </header>
     <section id="select-slider">
-    </section>
-
-
-</div>
-        <section class="slider item1">
-            <div class="slider-shevron shevron-left">
+        <section class="slider item1 show">
+            <button class="slider-shevron shevron-left" onclick="pushElement(1)">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </div>
+            </button>
             <div class="slider-control">
                 <p class="slider-control-h1">
                     Lorem ipsum dolor
@@ -66,14 +55,15 @@
                     Start now
                 </button>
             </div>
-            <div class="slider-shevron shevron-right">
+
+            <button class="slider-shevron shevron-right" onclick="pushElement(1)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
+            </button>
         </section>
         <section class="slider item2">
-            <div class="slider-shevron shevron-left">
+            <button class="slider-shevron shevron-left" onclick="pushElement(1)">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </div>
+            </button>
             <div class="slider-control">
                 <p class="slider-control-h1">
                     Lorem ipsum dolor
@@ -88,11 +78,56 @@
                     Start now
                 </button>
             </div>
-            <div class="slider-shevron shevron-right">
+            <button class="slider-shevron shevron-right" onclick="pushElement(1)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </div>
+            </button>
         </section>
--->
+    </section>
+    <section class="about">
+        <div class="about-container container">
+            <p class="about-header">
+                Lorem ipsum dolor
+            </p>
+            <p class="about-company">
+                About Company
+            </p>
+            <p class="about-company-info">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, animi corporis exercitationem ipsa magni neque nisi quae quod temporibus veniam.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi assumenda, deserunt distinctio doloremque ducimus exercitationem harum ipsa natus numquam perferendis qui quidem ratione recusandae sequi sit, tenetur vel, voluptas?
+            </p>
+            <p class="about-company-info">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda ea est expedita incidunt mollitia omnis, quisquam vel!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, eaque id, iste molestiae obcaecati officia quo quos recusandae tempora velit voluptatibus!
+            </p>
+            <button class="about-btn">Read more</button>
+        </div>
+    </section>
+    <section class="services">
+        <div class="services-container container">
+            <p class="about-header">
+                Lorem ipsum
+            </p>
+            <p class="about-company">
+                our services
+            </p>
+            <div class="some-services">
+                <ul>
+                    <li>
+
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+</div>
+
+
 
 </body>
 </html>

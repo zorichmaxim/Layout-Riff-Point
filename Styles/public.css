@@ -14,12 +14,11 @@ body, html {
     height:100%;
 }
 .wrapper {
-    background: lightgray;
     height: 100%;
 }
 .header {
     height: 80px;
-    background: whitesmoke;
+    background: white;
     text-transform: uppercase;
 }
 .header_height {
@@ -46,6 +45,10 @@ body, html {
     font-size: 16px;
 }
 
+.select-slider {
+    width: 100%;
+    height: 500px;
+}
 .slider {
     height: 500px;
     width: 100%;
@@ -53,15 +56,29 @@ body, html {
     background-size: cover;
     text-align: center;
     position: relative;
+    display: none;
 }
 
 .item1 {
     background-image: url("slider-images/top.jpg");
 }
+.slider::after {
+    content: '';
+    display: block;
+    background: #455a64;
+    width:100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.4;
+
+}
 .item2 {
     background-image: url("slider-images/Layer 4.jpg");
 }
 .slider-shevron {
+    background: none;
     width: 37px;
     height: 37px;
     border: 2px solid #ff6e40;
@@ -69,6 +86,7 @@ body, html {
     color: white;
     position: absolute;
     line-height: 32px;
+    z-index: 1000;
 }
 
 .shevron-left {
@@ -81,12 +99,12 @@ body, html {
 }
 .slider-control {
     width: 775px;
-    height: 100%;
     margin: 0 auto;
     text-transform: uppercase;
     color: white;
     position: relative;
     top: 125px;
+    z-index: 1000;
 }
 .slider-control-h1 {
     font-size: 41px;
@@ -107,7 +125,68 @@ body, html {
     background: #ff6e40;
 }
 
+.show {
+    display: block;
+}
 
+.about {
+    text-align: center;
+    border: 1px solid white
+}
+.about-container {
+    width: 100%;
+    height: 100%;
+    margin: 100px auto;
+    background: white;
+}
 
+.about-header {
+    font-size: 16px;
+    color: #bdbdbd;
+    margin: 0;
+    text-transform: uppercase;
+}
+.about-company {
+    font-size: 30px;
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+}
+.about-company-info {
+    font-size: 16px;
+    color: #b5b5b5;
+    margin: 26px;
 
+}
+.about-btn {
+    border: 1px solid black;
+    padding: 17px 48px;
+    font-size: 14px;
+    color: black;
+    background: none;
+    text-transform: uppercase;
+}
+.about-btn:hover {
+    background: black;
+    color: white;
+}
 
+.services {
+    background: #f5f5f5;
+    text-align: center;
+    border: 1px solid  #f5f5f5;
+}
+.services-container {
+    width: 100%;
+    height: 100%;
+    margin: 100px auto;
+}
+.some-services {
+
+}
+.some-services:before {
+    content: url("rount-img/Rounded corners.png");
+    display: block;
+    width: 10px;
+    height:100px;
+}
