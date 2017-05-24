@@ -6,6 +6,10 @@
     font-family: 'Montserrat-Regular';
     src: url('../fonts/Montserrat-Regular.ttf');
 }
+@font-face {
+    font-family: 'open-sans';
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
 body, html {
     height: 100%;
     font-family: 'Montserrat-Regular';
@@ -128,13 +132,11 @@ body, html {
 .show {
     display: block;
 }
-
 .about {
     text-align: center;
     border: 1px solid white
 }
 .about-container {
-    width: 100%;
     height: 100%;
     margin: 100px auto;
     background: white;
@@ -175,18 +177,122 @@ body, html {
     background: #f5f5f5;
     text-align: center;
     border: 1px solid  #f5f5f5;
+    padding-bottom: 99px;
 }
 .services-container {
-    width: 100%;
     height: 100%;
-    margin: 100px auto;
+    margin-top: 100px;
 }
-.some-services {
-
+.some-services-items {
+    margin-top: 33px;
 }
-.some-services:before {
+.service-icon {
+    display: block;
+    width: 52px;
+    height: 120px;
+    float: left;
+    font-size: 48px;
+    padding-top: 22px;
+    margin-right: 30px;
+    color: #ff6e40;
+}
+.service-icon:after {
     content: url("rount-img/Rounded corners.png");
     display: block;
-    width: 10px;
-    height:100px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+.some-services-item-h1 {
+    font-size: 20px;
+    margin: 0;
+    text-align: start;
+}
+.some-services-item-about {
+    margin: 0;
+    font-size: 16px;
+    text-align: start;
+    color: #7f7f7f;
+}
+
+.call-action {
+    background: #424242;
+    height: 130px;
+}
+.call-action-h1 {
+    font-size: 22px;
+    color: white;
+    margin-top: 43px;
+}
+.call-action-info {
+    font-family: 'open-sans';
+    font-size: 16px;
+    color: #bdbdbd;
+}
+
+.call-action-btn {
+    width: 280px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 2px solid #ff6e40;
+    background: none;
+    line-height: 100%;
+    padding: 16px 75px;
+    color: white;
+    margin-top: 40px;
+}
+.call-action-btn:hover {
+    background: #ff6e40;
+}
+
+.contacts {
+    height: 540px;
+    background: #f5f5f5;
+    padding-top:40px;
+}
+.contacts-info {
+    font-size: 16px;
+    color: #bdbdbd;
+    text-transform: uppercase;
+}
+.contacts-h1 {
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.contacts-address {
+
+}
+
+.contacts-icon {
+    display: block;
+    width: 62px;
+    height: 62px;
+    border-radius: 62px;
+    background: red;
+    float: left;
+    font-size: 30px;
+    padding-top: 16px;
+    margin-right: 13px;
+    color: white;
+    text-align: center;
+}
+.contacts-address-text {
+    font-family: open-sans;
+    font-size: 16px;
+    color: #b0b0b0;
+}
+.number-email-height {
+    line-height: 60px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.footer {
+    height: 65px;
+    background: #f5f5f5;
 }
