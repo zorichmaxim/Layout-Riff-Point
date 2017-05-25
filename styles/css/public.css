@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Montserrat-Bold';
-    src: url('../fonts/Montserrat-Bold.ttf');
+    src: url('../../fonts/Montserrat-Bold.ttf');
 }
 @font-face {
     font-family: 'Montserrat-Regular';
-    src: url('../fonts/Montserrat-Regular.ttf');
+    src: url('../../fonts/Montserrat-Regular.ttf');
 }
 @font-face {
     font-family: 'open-sans';
-    src: url('../fonts/OpenSans-Regular.ttf');
+    src: url('../../fonts/OpenSans-Regular.ttf');
 }
 body, html {
     height: 100%;
@@ -21,12 +21,16 @@ body, html {
     height: 100%;
 }
 .header {
-    height: 80px;
+    height: 72px;
     background: white;
     text-transform: uppercase;
 }
-.header_height {
+.header-container {
     height: 100%;
+}
+.header-list {
+    height: 100%;
+    line-height: 72px;
 }
 .header-logo {
     height: 100%;
@@ -36,17 +40,18 @@ body, html {
     border: 2px solid black;
     padding: 0 9px;
 }
-.header-menu {
-    height: 100%;
-}
+
 .header-logo-text {
     height:100%;
-    line-height: 15px;
+    line-height: 72px;
 }
-.header-menu-list {
-    height: 100%;
-    line-height: 50px;
+.header-list-item {
     font-size: 16px;
+    width: 100%;
+}
+.header-list-item li {
+    display: inline-block;
+    padding: 0 10px;
 }
 
 .select-slider {
@@ -64,7 +69,7 @@ body, html {
 }
 
 .item1 {
-    background-image: url("slider-images/top.jpg");
+    background-image: url("../images/slider-images/top.jpg");
 }
 .slider::after {
     content: '';
@@ -79,7 +84,7 @@ body, html {
 
 }
 .item2 {
-    background-image: url("slider-images/Layer 4.jpg");
+    background-image: url("../images/slider-images/Layer 4.jpg");
 }
 .slider-shevron {
     background: none;
@@ -197,11 +202,11 @@ body, html {
     color: #ff6e40;
 }
 .service-icon:after {
-    content: url("rount-img/Rounded corners.png");
+    content: url("../images/icons-images/Rounded corners.png");
     display: block;
     position: absolute;
     top: 6px;
-    left: 0;
+    left: 2px;
 }
 .some-services-item-h1 {
     font-size: 20px;
@@ -229,7 +234,6 @@ body, html {
     font-size: 16px;
     color: #bdbdbd;
 }
-
 .call-action-btn {
     width: 280px;
     text-transform: uppercase;
@@ -245,10 +249,90 @@ body, html {
     background: #ff6e40;
 }
 
+.gallery {
+    padding: 100px 0 ;
+    text-align: center;
+}
+.gallery-header {
+    font-size: 16px;
+    color: #bdbdbd;
+    margin: 0;
+    text-transform: uppercase;
+}
+.gallery-works {
+    font-size: 30px;
+    color: black;
+    margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+}
+.gallery-item {
+    height: 380px;
+    width: 380px;
+    margin: 5px;
+    background-image: url('../images/gallery-images-sprite/spritesheet.png');
+    background-repeat: no-repeat;
+}
+.gallery-item1 {
+    background-position: -887px -707px;
+}
+.gallery-item2 {
+    background-position: -1606px -94px;
+}
+.gallery-item3 {
+    background-position: -230px -602px;
+}
+.gallery-item4 {
+    background-position: -122px -78px
+}
+.gallery-item5 {
+    background-position: -811px -60px;
+}
+.gallery-item6 {
+    background-position: -1370px -664px;
+}
+
+.gallery-item-hover {
+    height: 100px;
+    width: 380px;
+    background: #f4f4f4;
+    position: relative;
+    top: 280px;
+    left: -14px;
+    padding-top: 25px;
+    display: none;
+}
+.gallery-item-hover-h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #ff6e40;
+}
+.gallery-item-hover-text {
+    font-size: 16px;
+    color: #8e8e8e;
+}
+.gallery-item-hover-icon {
+    display: block;
+    width: 62px;
+    height: 62px;
+    border-radius: 62px;
+    background: #ff6e40;
+    font-size: 30px;
+    padding-top: 17px;
+    color: white;
+    position: absolute;
+    top: -172px;
+    left: 160px;
+}
+
 .contacts {
     height: 540px;
     background: #f5f5f5;
     padding-top:40px;
+    position: relative;
+}
+.contacts-container {
+    margin-bottom: 35px;
 }
 .contacts-info {
     font-size: 16px;
@@ -261,16 +345,12 @@ body, html {
     text-transform: uppercase;
 }
 
-.contacts-address {
-
-}
-
 .contacts-icon {
     display: block;
     width: 62px;
     height: 62px;
     border-radius: 62px;
-    background: red;
+    background: #ff6e40;
     float: left;
     font-size: 30px;
     padding-top: 16px;
@@ -286,13 +366,42 @@ body, html {
 .number-email-height {
     line-height: 60px;
 }
-
+.chevron-contact {
+    bottom: 20px;
+    position: absolute;
+    right: 30px;
+}
+.chevron-contact a {
+    height: 32px;
+    width: 28px;
+    display: inline-block;
+}
 #map {
     height: 400px;
     width: 100%;
+    background: black;
 }
 
 .footer {
     height: 65px;
     background: #f5f5f5;
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height:65px;
+}
+.footer-social {
+    font-size: 16px;
+}
+.footer-social li {
+    display: inline-block;
+    padding: 0 10px;
+}
+.footer-center-text {
+    text-align: center;
+}
+.footer-right-text {
+    text-align: end;
+}
+.footer-delimiter {
+    color: #fab6a1;
 }
