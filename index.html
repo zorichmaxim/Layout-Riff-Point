@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="styles/images/favicon/favicon.ico" type="image/x-icon">
+
     <title>Riff Point</title>
 
 
-    <link rel="stylesheet" href="libs/grid/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/grid/bootstrap.min.css">
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/my-reset.css">
     <link rel="stylesheet" href="styles/css/public.css">
 
-    <script src="libs/jquery/jquery-3.2.1.min.js" defer></script>
+    <script src="js/jquery/jquery-3.2.1.min.js" defer></script>
     <script async defer
             src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBT53CtXV4fURPzIm7Q4AANytoPtN_u_a8&center=-34.1821124517326,150.99776821307364&zoom=16&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360"></script>
 
@@ -19,21 +21,21 @@
 
 </head>
 <body>
-<div class="wrapper">
-    <header class="header" id="scrollTop">
+<div class="wrapper" id="scrollUp">
+    <header class="header" id="stickyHeader">
         <div class="header-container container">
             <div class="row">
-                <div class="header-logo col-lg-3">
+                <div class="header-logo col-lg-3 col-md-3 col-sm-4 col-xs-4">
                     <p class="header-logo-text">
                         Layout <span class="header-logo-num"> 2 </span>
                     </p>
                 </div>
-                <div class="header-list col-lg-6 col-lg-offset-3">
+                <div class="header-list col-lg-6  col-md-7  col-sm-8 col-xs-8 col-lg-offset-3 col-md-offset-2">
                     <ul class="header-list-item">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Our works</a></li>
-                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Our works</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
                     </ul>
                 </div>
             </div>
@@ -41,49 +43,52 @@
     </header>
     <section id="select-slider">
         <section class="slider item1 show">
-            <button class="slider-shevron shevron-left" onclick="pushElement(1)">
+            <div class="slider-control">
+                <div class="container">
+                    <p class="slider-control-h1">
+                        Lorem ipsum dolor
+                    </p>
+                    <p class="slider-control-h2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing.
+                    </p>
+                    <button class="slider-control-btn">
+                        Start now
+                    </button>
+                </div>
+            </div>
+            <button class="slider-shevron shevron-left" onclick="pushElement(-1)">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <div class="slider-control">
-                <p class="slider-control-h1">
-                    Lorem ipsum dolor
-                </p>
-                <p class="slider-control-h2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing.
-                </p>
-                <button class="slider-control-btn">
-                    Start now
-                </button>
-            </div>
-
             <button class="slider-shevron shevron-right" onclick="pushElement(1)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
         </section>
         <section class="slider item2">
-            <button class="slider-shevron shevron-left" onclick="pushElement(1)">
+            <div class="slider-control">
+                <div class="container">
+                    <p class="slider-control-h1">
+                        Lorem ipsum dolor
+                    </p>
+                    <p class="slider-control-h2">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Autem consequatur deserunt eligendi,
+                        explicabo fugit ipsam odit porro possimus ullam velit?
+                        Error, excepturi inventore! Corporis dolorum, ducimus?
+                    </p>
+                    <button class="slider-control-btn">
+                        Start now
+                    </button>
+                </div>
+            </div>
+            <button class="slider-shevron shevron-left" onclick="pushElement(-1)">
                 <i class="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
-            <div class="slider-control">
-                <p class="slider-control-h1">
-                    Lorem ipsum dolor
-                </p>
-                <p class="slider-control-h2">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Autem consequatur deserunt eligendi,
-                    explicabo fugit ipsam odit porro possimus ullam velit?
-                    Error, excepturi inventore! Corporis dolorum, ducimus?
-                </p>
-                <button class="slider-control-btn">
-                    Start now
-                </button>
-            </div>
             <button class="slider-shevron shevron-right" onclick="pushElement(1)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
         </section>
     </section>
-    <section class="about">
+    <section class="about" id="about">
         <div class="about-container container">
             <p class="about-header">
                 Lorem ipsum dolor
@@ -107,7 +112,7 @@
             <button class="about-btn">Read more</button>
         </div>
     </section>
-    <section class="services">
+    <section class="services" id="services">
         <div class="services-container container">
             <p class="about-header">
                 Lorem ipsum
@@ -117,7 +122,7 @@
             </p>
             <div class="some-services">
                 <div class="row some-services-items">
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-users service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -126,7 +131,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, numquam!
                         </p>
                     </div>
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-comments service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -135,7 +140,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, numquam!
                         </p>
                     </div>
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-trophy service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -146,7 +151,7 @@
                     </div>
                 </div>
                 <div class="row some-services-items">
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-star service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -155,7 +160,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, numquam!
                         </p>
                     </div>
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-plane service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -164,7 +169,7 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, numquam!
                         </p>
                     </div>
-                    <div class="some-services-item col-lg-4">
+                    <div class="some-services-item col-lg-4 col-md-4 col-sm-4 col-xs-4">
                         <i class="fa fa-graduation-cap service-icon" aria-hidden="true"></i>
                         <p class="some-services-item-h1">
                             Some Service
@@ -181,7 +186,7 @@
     <section class="call-action">
         <div class="container">
             <div class="row">
-                <div class="call-action-info col-lg-7">
+                <div class="call-action-info col-lg-7 col-md-7 col-sm-7 col-xs-6">
                     <p class="call-action-h1">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit?
                     </p>
@@ -189,13 +194,13 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam!
                     </p>
                 </div>
-                <button class="call-action-btn col-lg-3 col-lg-offset-2">
+                <button class="call-action-btn col-lg-3 col-md-4 col-sm-5 col-xs-6 col-lg-offset-2 col-md-offset-1">
                     Subscribe now
                 </button>
             </div>
         </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="works">
         <div class="gallery-container container">
             <p class="gallery-header">
                 Lorem ipsum
@@ -203,30 +208,10 @@
             <p class="gallery-works">
                 our works
             </p>
-            <div class="row">
-                <div class="gallery-item gallery-item1 col-lg-4">
-                    <div class="gallery-item-hover">
-                        <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
-                        <p class="gallery-item-hover-h1">
-                            Ut pretium leo vet
-                        </p>
-                        <p class="gallery-item-hover-text">
-                            Category
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-item2 col-lg-4">
-                    <div class="gallery-item-hover">
-                        <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
-                        <p class="gallery-item-hover-h1">
-                            Ut pretium leo vet
-                        </p>
-                        <p class="gallery-item-hover-text">
-                            Category
-                        </p>
-                    </div>
-                </div>
-                <div class="gallery-item gallery-item3 col-lg-4">
+
+            <div class="gallery-item gallery-item1">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
                     <div class="gallery-item-hover">
                         <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
                         <p class="gallery-item-hover-h1">
@@ -238,8 +223,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="gallery-item gallery-item4 col-lg-4">
+            <div class="gallery-item gallery-item2">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
                     <div class="gallery-item-hover">
                         <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
                         <p class="gallery-item-hover-h1">
@@ -250,7 +236,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="gallery-item gallery-item5 col-lg-4">
+            </div>
+            <div class="gallery-item gallery-item3">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
                     <div class="gallery-item-hover">
                         <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
                         <p class="gallery-item-hover-h1">
@@ -261,7 +250,38 @@
                         </p>
                     </div>
                 </div>
-                <div class="gallery-item gallery-item6 col-lg-4">
+            </div>
+            <div class="gallery-item gallery-item4">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
+                    <div class="gallery-item-hover">
+                        <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
+                        <p class="gallery-item-hover-h1">
+                            Ut pretium leo vet
+                        </p>
+                        <p class="gallery-item-hover-text">
+                            Category
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item5">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
+                    <div class="gallery-item-hover">
+                        <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
+                        <p class="gallery-item-hover-h1">
+                            Ut pretium leo vet
+                        </p>
+                        <p class="gallery-item-hover-text">
+                            Category
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-item gallery-item6">
+                <div class="gallery-substrate">
+                    <div class="substrate"></div>
                     <div class="gallery-item-hover">
                         <i class="fa fa-share-square-o gallery-item-hover-icon" aria-hidden="true"></i>
                         <p class="gallery-item-hover-h1">
@@ -275,10 +295,10 @@
             </div>
         </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="contacts-container container">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 col-md-2 col-sm-1 contacts-logo">
                     <p class="contacts-info">
                         Tristique
                     </p>
@@ -286,17 +306,17 @@
                         Contact
                     </p>
                 </div>
-                <div class="col-lg-3 contacts-address">
+                <div class="col-lg-3 col-md-3 col-sm-4 contacts-address">
                     <i class="fa fa-map-marker contacts-icon" aria-hidden="true"></i>
                     <p class="contacts-address-text">2619 Old Fort Rd<br>
                         Fort Washington, PA 19034
                     </p>
                 </div>
-                <div class="col-lg-3 number-email-height">
+                <div class="col-lg-3 col-md-3 col-sm-4 number-email-height">
                     <i class="fa fa-phone contacts-icon" aria-hidden="true"></i>
                     <p class="contacts-address-text">610 5116 0418</p>
                 </div>
-                <div class="col-lg-3 number-email-height">
+                <div class="col-lg-3 col-md-4 col-sm-4 number-email-height">
                     <i class="fa fa-at contacts-icon" aria-hidden="true"></i>
                     <p class="contacts-address-text">layout.02@gmail.com</p>
                 </div>
@@ -304,17 +324,17 @@
         </div>
         <div id="map"></div>
         <button id="scroll-btn" class="slider-shevron chevron-contact">
-            <a href="#scrollTop">
+            <a href="#scrollUp">
                 <i class="fa fa-chevron-up" aria-hidden="true"> </i>
             </a>
         </button>
     </section>
     <footer class="footer">
         <div class="container">
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <p>Copyright 2016 @ Layout.02</p>
             </div>
-            <div class="footer-center-text col-lg-3 col-lg-offset-1">
+            <div class="footer-center-text col-lg-3 col-md-4 col-sm-4 col-xs-4 col-lg-offset-1 col-md-offset-1 col-sm-offset-1">
                 <ul class="footer-social">
                     <li>
                         <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -333,7 +353,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-right-text col-lg-4 col-lg-offset-1">
+            <div class="footer-right-text col-lg-4 col-xs-4 col-lg-offset-1">
                 <p>Privacy Policy <span class="footer-delimiter">|</span> Terms & Conditions</p>
             </div>
         </div>

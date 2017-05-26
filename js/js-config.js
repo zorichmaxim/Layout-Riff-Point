@@ -1,6 +1,5 @@
 $(document).ready(function () {
-    $('#select-slider').children
-    $("#scroll-btn").on("click", "a", function (event) {
+    $("#scroll-btn, .header-list-item").on("click", "a", function (event) {
         event.preventDefault();
         var id = $(this).attr('href'),
             top = $(id).offset().top;
@@ -9,14 +8,25 @@ $(document).ready(function () {
 
     $('.gallery-item').on({
         'mouseover': function () {
-            var hoverElement = $(this).find('.gallery-item-hover')
+            var hoverElement = $(this).find('.gallery-substrate');
             hoverElement.toggleClass('show')
         },
         'mouseout': function () {
-            var hoverElement = $(this).find('.gallery-item-hover')
+            var hoverElement = $(this).find('.gallery-substrate');
             hoverElement.toggleClass('show')
         }
     });
+
+    var NavTop = $('#stickyHeader').offset().top;
+
+    $(window).scroll(function(){
+        if( $(window).scrollTop() > NavTop ) {
+            $('#stickyHeader').css({position: 'fixed', top: '0px', margin: '0 auto', zIndex:'1001', width:'100%'});
+        } else {
+            $('#stickyHeader').css({position: 'static'});
+        }
+    });
+
 });
 var elem = document.getElementById("select-slider").childNodes,
     count = 0,
@@ -41,13 +51,13 @@ function pushElement(itemDirection) {
     }
     if (itemDirection === -1) {
         if (count == 0) {
-            res[count].classList.remove('show');
+            arrayElements[count].classList.remove('show');
             count = l - 1;
-            res[count].classList.add('show');
+            arrayElements[count].classList.add('show');
         }
         else {
-            res[count].classList.remove('show');
-            res[count + itemDirection].classList.add('show');
+            arrayElements[count].classList.remove('show');
+            arrayElements[count + itemDirection].classList.add('show');
             count -= 1
         }
     }
